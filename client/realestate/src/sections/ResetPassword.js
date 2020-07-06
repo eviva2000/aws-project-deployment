@@ -15,15 +15,18 @@ const ResetPassword = () => {
       console.log("email empty");
     } else {
       try {
-        await fetch("http://localhost:9090/resetpassword", {
-          method: "post",
-          body: JSON.stringify(email),
-          credentials: "include",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-        })
+        await fetch(
+          "http://ec2-18-232-129-39.compute-1.amazonaws.com/resetpassword",
+          {
+            method: "post",
+            body: JSON.stringify(email),
+            credentials: "include",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log("here", data.message);
