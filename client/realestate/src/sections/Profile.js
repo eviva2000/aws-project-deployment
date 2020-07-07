@@ -30,7 +30,7 @@ const Profile = (props) => {
 
     try {
       const response = await axios.put(
-        "http://ec2-18-232-129-39.compute-1.amazonaws.com/users",
+        "http://52.202.183.85/users",
         updatedData
       );
       setUserData(updatedData);
