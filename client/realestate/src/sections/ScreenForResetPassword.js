@@ -10,10 +10,7 @@ const ResetPassScreen = (props) => {
   console.log("thisss", userData.id);
   useEffect(() => {
     try {
-      fetch(
-        `http://ec2-18-232-129-39.compute-1.amazonaws.com/reset?resetpasswordtoken=${token}`,
-        {}
-      )
+      fetch(`http://52.202.183.85/reset?resetpasswordtoken=${token}`, {})
         .then((res) => res.json())
         .then((data) => {
           console.log("here", data.response);

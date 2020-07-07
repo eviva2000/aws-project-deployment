@@ -9,9 +9,7 @@ const Nav = (props) => {
     localStorage.removeItem("user");
     onAuth(false);
     try {
-      await axios.get(
-        "http://ec2-18-232-129-39.compute-1.amazonaws.com/users/logout"
-      );
+      await axios.get("http://52.202.183.85/users/logout");
       return;
     } catch (err) {
       return;
