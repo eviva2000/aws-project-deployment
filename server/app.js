@@ -6,7 +6,8 @@ dotEnv.config();
 app.use(express.json()); // to parse the body of an HTTP request
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:9090");
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+ res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", "http://52.202.183.85");
   res.header("Access-Control-Allow-Credentials", true);
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
   res.header(
@@ -50,7 +51,7 @@ const resetPasswordRoute = require("./routes/resetpassword");
 app.use(userRoute);
 app.use(resetPasswordRoute);
 
-const port = process.env.PORT;
+const port = 9090;
 app.listen(port, (error) => {
   if (error) {
     console.log("server can not listen");

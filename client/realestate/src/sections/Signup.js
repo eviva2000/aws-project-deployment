@@ -15,7 +15,7 @@ const Signup = (props) => {
       headers: { "Content-Type": "application/json" },
     };
     const res = await fetch(
-      "http://ec2-18-232-129-39.compute-1.amazonaws.com/users/signup",
+      "http://18.232.129.39/users/signup",
       options
     );
     const data = await res.json();
