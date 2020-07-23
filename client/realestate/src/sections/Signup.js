@@ -14,13 +14,9 @@ const Signup = (props) => {
       body: JSON.stringify(formData),
       headers: { "Content-Type": "application/json" },
     };
-<<<<<<< HEAD
 
-    const res = await fetch("http://52.202.183.85/users/signup", options);
+    const res = await fetch("http://18.212.125.115/users/signup", options);
 
-=======
-    const res = await fetch("http://localhost:9090/users/signup", options);
->>>>>>> 702080aea64457e8249cec694643ed085db06052
     const data = await res.json();
     console.log("response....", data);
     setErrorMessage(data.message);
