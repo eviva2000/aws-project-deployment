@@ -14,7 +14,9 @@ const Signup = (props) => {
       body: JSON.stringify(formData),
       headers: { "Content-Type": "application/json" },
     };
+
     const res = await fetch("http://18.212.125.115/users/signup", options);
+
     const data = await res.json();
     console.log("response....", data);
     setErrorMessage(data.message);
