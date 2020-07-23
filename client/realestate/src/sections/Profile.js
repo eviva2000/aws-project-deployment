@@ -30,7 +30,7 @@ const Profile = (props) => {
 
     try {
       const response = await axios.put(
-        "http://localhost:9090/users",
+        "http://3.82.1.90/users",
         updatedData
       );
       setUserData(updatedData);
@@ -51,7 +51,7 @@ const Profile = (props) => {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        "http://ec2-18-232-129-39.compute-1.amazonaws.com/users"
+        "http://3.82.1.90/users"
       );
       onAuth(false);
       localStorage.removeItem("user");

@@ -20,7 +20,7 @@ const Login = (props) => {
         "Content-Type": "application/json",
       },
     };
-    const res = await fetch("http://localhost:9090/users/login", options);
+    const res = await fetch("http://3.82.1.90/users/login", options);
     const data = await res.json();
     console.log("response in login....", data);
     if (data.status === 200) {
