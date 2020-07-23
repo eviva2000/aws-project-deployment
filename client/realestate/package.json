@@ -10,7 +10,11 @@
     "dotenv": "^8.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
     "react-hook-form": "^6.0.1",
+=======
+    "react-hook-form": "^6.0.8",
+>>>>>>> 702080aea64457e8249cec694643ed085db06052
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

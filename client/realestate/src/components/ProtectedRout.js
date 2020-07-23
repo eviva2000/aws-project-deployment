@@ -10,7 +10,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
   useEffect(() => {
     const userStatus = async () => {
       try {
-        const response = await axios.get("http://52.202.183.85/users/session");
+        const response = await axios.get("http://localhost:9090/users/session");
         const userData = response.data;
         if (!userData) {
           console.log("not logged in");

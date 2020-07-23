@@ -30,7 +30,7 @@ const Profile = (props) => {
 
     try {
       const response = await axios.put(
-        "http://52.202.183.85/users",
+        "http://localhost:9090/users",
         updatedData
       );
       setUserData(updatedData);
