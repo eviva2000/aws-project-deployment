@@ -17,9 +17,7 @@ function App() {
   const [auth, setAuth] = useState(localStorage.getItem("user") ? true : false);
 
   const [userData, setUserData] = useState(
-    localStorage.getItem("user") !== "undefined"
-      ? JSON.parse(localStorage.getItem("user"))
-      : ""
+    localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : ""
   );
 
   return (

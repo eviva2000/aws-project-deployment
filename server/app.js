@@ -2,7 +2,10 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const dotEnv = require("dotenv");
+const path = require("path");
+
 dotEnv.config();
+app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json()); // to parse the body of an HTTP request
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:9090");
@@ -49,6 +52,10 @@ const userRoute = require("./routes/user");
 const resetPasswordRoute = require("./routes/resetpassword");
 app.use(userRoute);
 app.use(resetPasswordRoute);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/build/index.html"));
+});
 
 const port = process.env.PORT;
 app.listen(port, (error) => {
