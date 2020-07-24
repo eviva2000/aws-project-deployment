@@ -53,22 +53,13 @@ const userRoute = require("./routes/user");
 const resetPasswordRoute = require("./routes/resetpassword");
 app.use(userRoute);
 app.use(resetPasswordRoute);
-<<<<<<< HEAD
 const port = 9090;
 
-=======
-
-const port = 9090;
->>>>>>> 9984b9662c7aaf60fe4b71dd9124edb9227d30cb
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/build/index.html"));
 });
 
-<<<<<<< HEAD
-
-=======
 // const port = process.env.PORT;
->>>>>>> 9984b9662c7aaf60fe4b71dd9124edb9227d30cb
 app.listen(port, (error) => {
   if (error) {
     console.log("server can not listen");

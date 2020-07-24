@@ -15,7 +15,7 @@ const Signup = (props) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const res = await fetch("http://3.82.1.90/users/signup", options);
+    const res = await fetch("/users/signup", options);
 
     const data = await res.json();
     console.log("response....", data);

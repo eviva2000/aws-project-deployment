@@ -29,10 +29,7 @@ const Profile = (props) => {
     };
 
     try {
-      const response = await axios.put(
-        "http://3.82.1.90/users",
-        updatedData
-      );
+      const response = await axios.put("/users", updatedData);
       setUserData(updatedData);
       console.log(response.data.response);
       localStorage.setItem("user", JSON.stringify(response.data.response));
@@ -50,9 +47,7 @@ const Profile = (props) => {
   //Delete user profile
   const handleDelete = async () => {
     try {
-      await axios.delete(
-        "http://3.82.1.90/users"
-      );
+      await axios.delete("http://3.82.1.90/users");
       onAuth(false);
       localStorage.removeItem("user");
       history.push("/");
